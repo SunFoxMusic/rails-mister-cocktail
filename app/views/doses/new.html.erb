@@ -1,0 +1,7 @@
+<h1><%= "New ingredient for #{@cocktail.name}" %></h1>
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.error_notification %>
+  <%= f.association :ingredient %>
+  <%= f.input :description %>
+  <%= f.submit %>
+<% end %>
